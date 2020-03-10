@@ -6,7 +6,7 @@
 	"description": "A directory-based micro-function server",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/mccallofthewild/function-folder-server.git"
+		"url": "git+https://github.com/mccallofthewild/file-function-server.git"
 	},
 	"main": "lib/index.js",
 	"bin": "bin/index.js",
