@@ -1,6 +1,6 @@
-import { FunctionFolderServer } from '.';
+import { FileFunctionServer } from '.';
 
 describe('FunctionFolderServer', () => {
-	new FunctionFolderServer().start();
+	new FileFunctionServer().start();
 	it('cool', () => new Promise(r => setTimeout(r, 2000)));
 });

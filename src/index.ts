@@ -1,15 +1,15 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+// import 'core-js/stable';
+// import 'regenerator-runtime/runtime';
 import fs from 'fs';
 import path from 'path';
 import express from 'express';
 
-export type FunFolHandler = (
+export type FileFunctionHandler = (
 	req: express.Request,
 	res: express.Response
 ) => any;
 
-export class FunctionFolderServer {
+export class FileFunctionServer {
 	private app: express.Express;
 	private fnDir: string;
 	public port: number;
@@ -36,9 +36,13 @@ export class FunctionFolderServer {
 		this.attachFunctionsEndpoint();
 		this.port = +port;
 	}
+	private formatFunctionName(name: string) {
+		return name.split('.')[0];
+	}
 	private attachFunctionsEndpoint() {
 		this.app.use('/functions/:function?', async (req, res) => {
-			if (!req.params.function) {
+			const fnName = req.params.function;
+			if (!fnName) {
 				const fns = fs.readdirSync(this.fnDir);
 				return res.send(/* HTML */ `
 					<h1>Functions:</h1>
@@ -53,12 +57,33 @@ export class FunctionFolderServer {
 					</ul>
 				`);
 			}
-			console.log(/* template */ `running function: ${req.params.function}`);
-			const body = await require(`./functions/${req.params.function}`).handler(
-				req,
-				res
-			);
-			res.send(body);
+			try {
+				let fnModule;
+				try {
+					fnModule = require(path.relative(
+						__dirname,
+						path.join(this.fnDir, fnName)
+					));
+				} catch (e) {}
+				if (!fnModule) {
+					res.status(404);
+					return res.send(`file/folder not found for function ${fnName}`);
+				}
+				const fnHandler = fnModule.default;
+				if (!fnHandler) {
+					res.status(404);
+					return res.send(
+						`handler not found in file/folder for function ${fnName}`
+					);
+				}
+				console.log(/* template */ `running function: ${fnName}`);
+				const body = await fnHandler(req, res);
+				res.send(body);
+			} catch (e) {
+				console.log(e);
+				res.status(500);
+				res.send('failed');
+			}
 		});
 	}
 }
