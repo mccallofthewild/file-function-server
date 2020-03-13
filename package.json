@@ -2,7 +2,7 @@
 	"author": "McCall Alexander",
 	"license": "MIT",
 	"name": "file-function-server",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "A directory-based micro-function server",
 	"repository": {
 		"type": "git",
