@@ -6,6 +6,7 @@
 
 <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/>
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
+
 ### ⚙️ Config Object 
 | Property     | Description                         | Required | Default                                 |
 |--------------|-------------------------------------|----------|-----------------------------------------|
