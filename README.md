@@ -2,7 +2,7 @@
 
 # 🕊File Function Server
 
-## No-Frills Node.js Microfunctions
+## No-Frills Node.js REST Endpoints
 
 <!-- *So simple a neanderthal could use it*
  <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/> -->
