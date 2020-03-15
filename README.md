@@ -13,8 +13,9 @@
 ```
 📦your-project
  ┣ 📂functions
- ┃ ┣ 📜hello-world.js
- ┃ ┗ 📜stripe-subscribed--webhook.js
+ ┃ ┣ 📂stripe-subscribed--webhook
+ ┃ ┃ ┗ 📜index.js
+ ┃ ┗ 📜hello-world.js
  ┗ 📜package.json
 ``` 
 
@@ -23,8 +24,8 @@
 `POST|GET|PUT|PATCH|DELETE` endpoints:
 
 ```
-🌎/functions/hello-world
 🌎/functions/stripe-subscribed--webhook
+🌎/functions/hello-world
 ```
 
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
