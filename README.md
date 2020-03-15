@@ -2,14 +2,30 @@
 
 # 🕊File Function Server
 
-## 🙅‍♀️ No-Frills Node.js REST Endpoints
+*🙅‍♀️ No-Frills Node.js REST Endpoints*
 
 <!-- *So simple a neanderthal could use it*
  <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/> -->
 
-## Overview
+## ⏰ 60-Second Setup Starting... Now!
 
-### 🗂 File Structure
+### ⬇️ Install
+`
+npm i file-function-server
+`
+or 
+`
+yarn add file-function-server
+`
+
+### 📂 Create Functions Folder
+```
+📦your-project
+ ┣ 📂functions
+ ┗ 📜package.json
+``` 
+
+### 👨‍🏭 Create a File Function
 ```
 📦your-project
  ┣ 📂functions
