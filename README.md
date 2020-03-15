@@ -2,7 +2,7 @@
 
 # 🕊File Function Server
 
-> So simple a neanderthal could use it
+> *So simple a neanderthal could use it*
 
 <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/>
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
