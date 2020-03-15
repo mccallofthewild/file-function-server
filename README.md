@@ -78,6 +78,16 @@ export default ((req, res) => {
 </p>
 </details>  
 
+### Script
+Finally, add the following to your `package.json`
+```json
+"scripts": {
+ "start": "file-function-server"
+}
+```
+
+Run `npm run start` or `yarn start` from the command line.
+
 ### 📻 Generated API
 
 | Endpoint| GET | POST | PUT | PATCH | DELETE |
@@ -87,7 +97,21 @@ export default ((req, res) => {
 
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
 
-## Usage
+## Programmatic Usage
+
+```javascript
+const { FileFunctionServer } = require('file-function-server');
+new FileFunctionServer(/* optional config */).start();
+```
+Custom Function Directory
+```javascript
+const { FileFunctionServer } = require('file-function-server');
+const path = require('path');
+new FileFunctionServer({
+	functionsDir: path.join(__dirname, '/api-functions')
+}).start();
+```
+
 
 ### ⚙️ Config Object 
 | Property     | Description                         | Required | Default                                 |
