@@ -36,7 +36,44 @@ Endpoints are defined by naming files & folders
  ┃ ┗ 📜hello-world.js
  ┗ 📜package.json
 ``` 
+The endpoint handler is the `default` node module export. It takes two arguments: 
+1. `req` (`express.Request` type) 
+2. `res` (`express.Response` type)
 
+**hello-world.js** (JavaScript)
+```javascript
+module.exports.default = function (req, res) {
+  return 'Hello World!';
+};
+
+```
+
+<details>
+ <summary><b>hello-world.js</b> (ES6)</summary>
+<p>
+
+```javascript
+export default (req, res) => 'Hello World!';
+```
+
+</p>
+</details>  
+
+<details>
+ <summary><b>hello-world.ts</b> (TypeScript)</summary>
+<p>
+
+```typescript
+import { FileFunctionHandler } from 'file-function-server';
+
+export default ((req, res) => {
+ // Intellisense enabled!
+ return 'Hello World!';
+}) as FileFunctionHandler;
+```
+
+</p>
+</details>  
 
 ### 📻 Generated API
 
