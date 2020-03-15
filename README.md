@@ -2,7 +2,7 @@
 
 # 🕊File Function Server
 
-## No-Frills Node.js REST Endpoints
+## 🙅‍♀️ No-Frills Node.js REST Endpoints
 
 <!-- *So simple a neanderthal could use it*
  <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/> -->
@@ -27,6 +27,8 @@
 | `/functions/hello-world` |✅|✅|✅|✅|✅|
 
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
+
+## Usage
 
 ### ⚙️ Config Object 
 | Property     | Description                         | Required | Default                                 |
