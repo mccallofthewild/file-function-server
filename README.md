@@ -2,9 +2,10 @@
 
 # 🕊File Function Server
 
-*So simple a neanderthal could use it*
+## No-Frills Node.js Microfunctions
 
-<img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/>
+<!-- *So simple a neanderthal could use it*
+ <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/> -->
 
 ## Overview
 
