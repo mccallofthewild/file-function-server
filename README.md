@@ -2,12 +2,13 @@
 
 # 🕊File Function Server
 
-*🙅‍♀️ No-Frills Node.js REST Endpoints*
+*No-Frills Node.js API Endpoints*
 
 <!-- *So simple a neanderthal could use it*
  <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/> -->
 
-## ⏰ 60-Second Setup Starting... Now!
+## ⏰ 60-Second Setup *Starting... Now!*
+Requirements: `Node.js >=7`, `NPM` or `Yarn`
 
 ### ⬇️ Install
 `
@@ -26,14 +27,16 @@ yarn add file-function-server
 ``` 
 
 ### 👨‍🏭 Create a File Function
+Endpoints are defined by naming files & folders
 ```
 📦your-project
  ┣ 📂functions
  ┃ ┣ 📂stripe-subscribed--webhook
- ┃ ┃ ┗ 📜index.js
+ ┃ ┃ ┗ 📜index.js # Files named `index` resolve to their parent folder's name.
  ┃ ┗ 📜hello-world.js
  ┗ 📜package.json
 ``` 
+
 
 ### 📻 Generated API
 
