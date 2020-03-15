@@ -21,12 +21,10 @@
 
 ### 📻 Generated API
 
-`POST|GET|PUT|PATCH|DELETE` endpoints:
-
-```
-🌎/functions/stripe-subscribed--webhook
-🌎/functions/hello-world
-```
+| Endpoint| GET | POST | PUT | PATCH | DELETE |
+|---------------------------------------|-----|------|-----|-------|--------|
+| `/functions/stripe-subscribed--webhook` | ✅|✅| ✅|✅| ✅|
+| `/functions/hello-world` |✅|✅|✅|✅|✅|
 
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
 
