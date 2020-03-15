@@ -2,9 +2,30 @@
 
 # 🕊File Function Server
 
-> *So simple a neanderthal could use it*
+*So simple a neanderthal could use it*
 
 <img src="https://media.giphy.com/media/8xsrNAZGhTCW4/source.gif" height="200"/>
+
+## Overview
+
+### 🗂 File Structure
+```
+📦your-project
+ ┣ 📂functions
+ ┃ ┣ 📜hello-world.js
+ ┃ ┗ 📜stripe-subscribed--webhook.js
+ ┗ 📜package.json
+``` 
+
+### 📻 Generated API
+
+`POST|GET|PUT|PATCH|DELETE` endpoints:
+
+```
+🌎/functions/hello-world
+🌎/functions/stripe-subscribed--webhook
+```
+
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
 
 ### ⚙️ Config Object 
