@@ -27,18 +27,21 @@ yarn add file-function-server
 ``` 
 
 ### 👨‍🏭 Create a File Function
-Endpoints are defined by naming files & folders
+
+#### 🎬 Endpoints
+Routes are defined by naming files & folders
 ```
 📦your-project
  ┣ 📂functions
- ┃ ┣ 📂stripe-subscribed--webhook
- ┃ ┃ ┗ 📜index.js # Files named `index` resolve to their parent folder's name.
  ┃ ┗ 📜hello-world.js
  ┗ 📜package.json
 ``` 
+
+#### 🤠 Request Handlers
+
 The endpoint handler is the `default` node module export. It takes two arguments: 
-1. `req` (`express.Request` type) 
-2. `res` (`express.Response` type)
+1. `req` (<a href="https://expressjs.com/en/5x/api.html#req">`express.Request`</a> type) 
+2. `res` (<a href="https://expressjs.com/en/5x/api.html#res">`express.Response`</a> type)
 
 **hello-world.js** (JavaScript)
 ```javascript
