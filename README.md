@@ -108,7 +108,7 @@ Custom Function Directory
 const { FileFunctionServer } = require('file-function-server');
 const path = require('path');
 new FileFunctionServer({
-	functionsDir: path.join(__dirname, '/api-functions')
+ functionsDir: path.join(__dirname, '/api-functions')
 }).start();
 ```
 
