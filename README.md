@@ -11,6 +11,9 @@
 Requirements: `Node.js >=7`, `NPM` or `Yarn`
 
 ### ⬇️ Install
+> `npm init` (if fresh project)
+
+
 `
 npm i file-function-server
 `
@@ -26,9 +29,8 @@ yarn add file-function-server
  ┗ 📜package.json
 ``` 
 
-### 👨‍🏭 Create a File Function
+### 👨‍🏭 Create File Function
 
-#### 🎬 Endpoints
 Routes are defined by naming files & folders
 ```
 📦your-project
@@ -36,8 +38,6 @@ Routes are defined by naming files & folders
  ┃ ┗ 📜hello-world.js
  ┗ 📜package.json
 ``` 
-
-#### 🤠 Request Handlers
 
 The endpoint handler is the `default` node module export. It takes two arguments: 
 1. `req` (<a href="https://expressjs.com/en/5x/api.html#req">`express.Request`</a> type) 
