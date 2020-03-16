@@ -86,14 +86,13 @@ Finally, add the following to your `package.json`
 }
 ```
 
+### 📻 Generated API
 Run `npm run start` or `yarn start` from the command line.
 
-### 📻 Generated API
-Your API Endpoints are visible at localhost:9000/functions
+Your API Endpoints are visible at <a href="http://localhost:9000/functions">localhost:9000/functions</a>
 
 | Endpoint| GET | POST | PUT | PATCH | DELETE |
 |---------------------------------------|-----|------|-----|-------|--------|
-| `/functions/stripe-subscribed--webhook` | ✅|✅| ✅|✅| ✅|
 | `/functions/hello-world` |✅|✅|✅|✅|✅|
 
 <!-- generated with https://www.tablesgenerator.com/markdown_tables# -->
