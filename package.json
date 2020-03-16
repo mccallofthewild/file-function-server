@@ -3,7 +3,19 @@
 	"license": "MIT",
 	"name": "file-function-server",
 	"version": "1.0.4",
-	"description": "A directory-based micro-function server",
+	"description": "No-Frills Node.js API Endpoints",
+	"keywords": [
+		"file",
+		"directory",
+		"server",
+		"serverless",
+		"microfunction",
+		"microservice",
+		"folder",
+		"REST",
+		"endpoints",
+		"minimal"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/mccallofthewild/file-function-server.git"
@@ -20,7 +32,8 @@
 		"test": "jest ./src"
 	},
 	"dependencies": {
-		"express": "^4.17.1"
+		"express": "^4.17.1",
+		"require-directory": "^2.1.1"
 	},
 	"devDependencies": {
 		"@types/express": "^4.17.1",

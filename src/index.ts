@@ -7,7 +7,7 @@ import express from 'express';
 export type FileFunctionHandler = (
 	req: express.Request,
 	res: express.Response
-) => any;
+) => number;
 
 export class FileFunctionServer {
 	private app: express.Express;
@@ -41,18 +41,19 @@ export class FileFunctionServer {
 	}
 	private attachFunctionsEndpoint() {
 		this.app.use('/functions/:function?', async (req, res) => {
-			const fnName = req.params.function;
+			const fnName = this.formatFunctionName(req.params.function);
 			if (!fnName) {
 				const fns = fs.readdirSync(this.fnDir);
 				return res.send(/* HTML */ `
 					<h1>Functions:</h1>
 					<ul>
 						${fns
-							.map(
-								fn => `<li>
-								<a href="/functions/${fn}">${fn}</a>
-							</li>`
-							)
+							.map(fn => {
+								fn = this.formatFunctionName(fn);
+								return `<li>
+									<a href="/functions/${fn}">${fn}</a>
+								</li>`;
+							})
 							.join('')}
 					</ul>
 				`);
