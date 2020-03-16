@@ -89,6 +89,7 @@ Finally, add the following to your `package.json`
 Run `npm run start` or `yarn start` from the command line.
 
 ### 📻 Generated API
+Your API Endpoints are visible at localhost:9000/functions
 
 | Endpoint| GET | POST | PUT | PATCH | DELETE |
 |---------------------------------------|-----|------|-----|-------|--------|
