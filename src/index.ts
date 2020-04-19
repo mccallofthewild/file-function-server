@@ -25,7 +25,7 @@ export class FileFunctionServer {
 	constructor({
 		app = express(),
 		functionsDir = path.join(process.env.PWD || process.cwd(), '/functions'),
-		port = process.env.PORT || 9000
+		port = process.env.PORT || 9000,
 	}: {
 		app?: express.Express;
 		functionsDir?: string;
@@ -40,24 +40,26 @@ export class FileFunctionServer {
 		return name.split('.')[0];
 	}
 	private attachFunctionsEndpoint() {
-		this.app.use('/functions/:function?', async (req, res) => {
-			const fnName = this.formatFunctionName(req.params.function);
-			if (!fnName) {
-				const fns = fs.readdirSync(this.fnDir);
-				return res.send(/* HTML */ `
-					<h1>Functions:</h1>
-					<ul>
-						${fns
-							.map(fn => {
-								fn = this.formatFunctionName(fn);
-								return `<li>
+		this.app.get('/functions', async (req, res) => {
+			const fns = fs.readdirSync(this.fnDir);
+			return res.send(/* HTML */ `
+				<h1>Functions:</h1>
+				<ul>
+					${fns
+						.map((fn) => {
+							fn = this.formatFunctionName(fn);
+							return `<li>
 									<a href="/functions/${fn}">${fn}</a>
 								</li>`;
-							})
-							.join('')}
-					</ul>
-				`);
-			}
+						})
+						.join('')}
+				</ul>
+			`);
+		});
+		this.app.use('/functions/*', async (req, res) => {
+			const fnName = this.formatFunctionName(
+				req.originalUrl.split('/functions')[1]
+			);
 			try {
 				let fnModule;
 				try {
