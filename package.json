@@ -2,7 +2,7 @@
 	"author": "McCall Alexander",
 	"license": "MIT",
 	"name": "file-function-server",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "No-Frills Node.js API Endpoints",
 	"keywords": [
 		"file",
